@@ -3,25 +3,90 @@
   <head>
     <title>Nocturnalia</title>
     <%= csrf_meta_tags %>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded|Lato" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/07439a54c4.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-
-  <body>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
-
-    <%= yield %>
-
+  <body data-spy="scroll" data-target=".navbar">
+    <div id="wrapper">
+      <!--navbar starts here-->
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">LOGO<h5>Goes Here</h5></a>
+          </div>
+          <ul class="list-inline">  
+            <li>
+              <a href="#" class="hidden-sm hidden-md hidden-lg hidden-xl"><i class="fa fa-user-plus"></i></a>
+            </li>
+            <li>
+              <a href="#" class="hidden-sm hidden-md hidden-lg hidden-xl"><i class="fa fa-info-circle"></i></a>
+            </li>
+            <li>
+              <a href="#" class="hidden-sm hidden-md hidden-lg hidden-xl"><i class="fa fa-shopping-basket"></i></a>
+            </li>
+            <li>
+              <a href="#" class="hidden-sm hidden-md hidden-lg hidden-xl"><i class="fa fa-calendar"></i></a>
+            </li>
+            <li>
+              <a href="#" class="hidden-sm hidden-md hidden-lg hidden-xl"><i class="fa fa-envelope"></i></a>
+            </li>
+            <li>
+              <a href="#" class="hidden-xs login">Login/Register</a>
+            </li>
+          </ul>
+        </div>
+      </nav><!-- end navbar -->
+      <!--sidebar starts here-->
+      <div class="icon-bar hidden-xs">
+        <a href="#" data-toggle="tooltip" data-placement="right" title="Home">
+          <i class="fa fa-home"></i>
+        </a> 
+        <a href="#" data-toggle="tooltip" data-placement="right" title="About">
+          <i class="fa fa-info-circle"></i>
+        </a> 
+        <a href="#" data-toggle="tooltip" data-placement="right" title="Shop">
+          <i class="fa fa-shopping-basket"></i>
+        </a> 
+        <a href="#" data-toggle="tooltip" data-placement="right" title="Events">
+          <i class="fa fa-calendar"></i>
+        </a>
+        <a href="#" data-toggle="tooltip" data-placement="right" title="Contact">
+          <i class="fa fa-envelope"></i>
+        </a> 
+      </div>
+<!-- end sidebar -->
+<!-- Page Content -->
+      <div id="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-sm-11 col-sm-offset-1" >
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer>
-      &copy; 2016 Delie Posnanski
+      <div class="copyright">
+        <h4 id="copy">&copy; 2017 Nocturnalia</h4>
+      </div>
+      <div class="twitter">
+        <a class="twitter-follow-button social" href="https://twitter.com/dposnanski" data-show-screen-name="false" data-lang="en" data-show-count="false"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a>
+      </div>
+      <div class="facebook">
+        <a class="fb-follow social" href="https://www.facebook.com/nocturnalia"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a>
+      </div>
+      <div class="instagram">
+        <a class="fb-follow social" href="https://www.instagram.com/nocturnalia"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+      </div>
+      <div class="youtube">
+        <a class="fb-follow social" href="https://www.youtube.com/nocturnalia"><i class="fa fa-youtube-square fa-lg" aria-hidden="true"></i></a>
+      </div>
     </footer>
-
   </body>
 </html>
