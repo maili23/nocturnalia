@@ -1,20 +1,52 @@
 * { box-sizing: border-box;
 /*border: 1px solid aqua;*/}
 
-/* 
+
 body, 
 html { 
   height: 100%;
   background-color: #FFF;
   font-size: 16px;
-  color: #333;
+  font-family: 'Lato', sans-serif;
+  /*color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  margin: 33px;
+   margin: 33px;*/
 }
 
-p, ol, ul, td {
+table {
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 1em;
+}
+
+tr {
+  height: 3em;
+}
+
+tr:nth-child(even) {background-color: #F2F2F2}
+
+.chooseaction  {
+  text-align: center;
+  text-decoration: none;
+}
+
+tbody tr:hover {background-color: #C1CAD6}
+
+th {
+  text-align: center;
+  background-color: #1D2021;
+  color: #F2F2F2;
+}
+
+/*p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -27,18 +59,18 @@ pre {
   font-size: 11px;
 }
 
-a {
-  color: #000;
+*/a {
+  color: #1D2021;
 
   &:visited {
-    color: #666;
+    color: #3A606E;
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #785589;
+    text-decoration: none;
   }
-}
+}/*
 
 th {
   padding-bottom: 5px;
@@ -49,12 +81,19 @@ td {
   padding-left: 5px;
   padding-right: 5px;
 }
+*/
 
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
+td .field {
+  
 }
+
+input {
+    width: 100%;
+}
+
+div .actions {
+    margin: 10px 0;
+  }
 
 #notice {
   color: green;
@@ -93,4 +132,4 @@ div {
 
 label {
   display: block;
-}*/
+}
