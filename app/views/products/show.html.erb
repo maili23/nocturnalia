@@ -5,7 +5,7 @@
   </header>
   <div class="row">
     <div class="col-lg-5">
-      <%= image_tag("cups.jpg", class: "img-responsive product-image") %>    
+      <%= image_tag(product.image_url, class: "img-responsive product-image") %>
     </div>
     <div class="col-lg-7">
       <h4 class="description-main">
@@ -20,12 +20,14 @@
       <div class="row">
         <div class="col-xs-6 col-lg-4 product-sel">
           <h4>PRICE</h4>
+          <p><%= @product.price %></p>
         </div>
         <div class="col-xs-6 col-lg-4 product-sel">
           <h4>QUANTITY</h4>
         </div>
         <div class="col-lg-4 product-sel">
-          <h4>DESIGN</h4>
+          <h4>COLOR</h4>
+          <p><%= @product.color %></p>
         </div>
       </div>
       <input type="submit" class="btn btn-info btn-lg" value="add to cart">
