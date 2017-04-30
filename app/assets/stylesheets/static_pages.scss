@@ -8,7 +8,7 @@
 body, 
 html { 
   height: 100%;
-  background-color: #FFF;
+  background-color: #FCFCFC;
   font-size: 16px;
 }
 
@@ -16,29 +16,47 @@ h1,
 h2,
 h3 {
   font-family: 'BioRhyme Expanded', serif;
+}
+
+h1 {
+  color: #785589;
+  padding-bottom: 2vh;
+  margin: 0 auto;
   text-align: right;
   font-size: 4em;
   text-transform: uppercase;
 }
 
-h5 {
-  font-family: 'Lato', sans-serif;
-  text-align: center;
+h4 {
+  font-family: 'BioRhyme', serif;
 }
 
-h4,
+h5 {
+  font-family: 'Lato', sans-serif;
+  
+}
+
 p {
   font-family: 'Lato', sans-serif;
-  font-size: 1.5em;
+  font-size: 1.25em;
   text-align: justify;
 }
 
 .row {
-  background-color: #FFF;}
+  background-color: #FCFCFC;}
 
 #wrapper { 
   min-height: 100%; 
   width: 100%;
+}
+
+.navbar-brand {
+  margin:  1vh 0;
+  padding: 0;
+}
+
+.logo {
+  width: 10vw;
 }
 
 #content { 
@@ -57,8 +75,8 @@ p {
 footer { 
   margin-top: -3em; 
   height: 3em; /* height should match neg margin.*/
-  background-color: #1D2021;
-  color: #F2F2F2;
+  background-color: transparent;
+  color: #1D2021;
   width: 100%;
   padding: 0.25em;
   z-index: 19999;
@@ -80,7 +98,7 @@ footer {
 }
 
 .social {
-  color: #F2F2F2;
+  color: #1D2021;
   margin: 0.5em;
   display: inline-block;
   float: right;
@@ -104,7 +122,7 @@ nav {
 
 .navbar {
   margin-bottom: 0;
-  background-color: #FFF;
+  background-color: #FCFCFC;
   border: 0;
 }
 
@@ -167,7 +185,7 @@ li {
   z-index: 1030;
   left: 0;
   transform: translateY(25vh);
-  background-color: #1D2021;
+  background-color: transparent;
 }
 
 .icon-bar a {
@@ -175,7 +193,7 @@ li {
     text-align: center; /* Center-align text */
     padding: 0.5em; /* Add some padding */
     transition: all 0.3s ease; /* Add transition for hover effects */
-    color: #F2F2F2; /* White text color */
+    color: #1D2021; /* White text color */
     font-size: 36px; /* Increased font-size */
 }
 

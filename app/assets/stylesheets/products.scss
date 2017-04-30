@@ -1,3 +1,27 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.product-image {
+  width: 100%;
+  margin: auto auto;
+}
+
+.description-main {
+  text-align: center;
+}
+
+.btn {
+  margin: 1vh 0;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+
+.desc-details {
+  font-size: 1.25em;
+  font-family: 'Lato', sans-serif;
+}
+
+.product-sel {
+  text-align: center;
+}
