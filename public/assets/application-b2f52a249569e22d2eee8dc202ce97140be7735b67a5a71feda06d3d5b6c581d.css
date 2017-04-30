@@ -1,0 +1,455 @@
+/* line 5, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/products.scss */
+.product-image {
+  width: 100%;
+  margin: auto auto;
+}
+
+/* line 10, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/products.scss */
+.description-main {
+  text-align: center;
+}
+
+/* line 14, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/products.scss */
+.btn {
+  margin: 1vh 0;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+
+/* line 20, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/products.scss */
+.desc-details {
+  font-size: 1.25em;
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 25, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/products.scss */
+.product-sel {
+  text-align: center;
+}
+/* line 1, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+* {
+  box-sizing: border-box;
+  /*border: 1px solid aqua;*/
+}
+
+/* line 5, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+body,
+html {
+  height: 100%;
+  background-color: #FFF;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  /*color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+   margin: 33px;*/
+}
+
+/* line 18, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+table {
+  width: 100%;
+}
+
+/* line 22, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+table, th, td {
+  border: 1px solid black;
+}
+
+/* line 26, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+th, td {
+  padding: 1em;
+}
+
+/* line 30, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+tr {
+  height: 3em;
+}
+
+/* line 34, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+tr:nth-child(even) {
+  background-color: #F2F2F2;
+}
+
+/* line 36, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+.chooseaction {
+  text-align: center;
+  text-decoration: none;
+}
+
+/* line 41, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+tbody tr:hover {
+  background-color: #C1CAD6;
+}
+
+/* line 43, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+th {
+  text-align: center;
+  background-color: #1D2021;
+  color: #F2F2F2;
+}
+
+/*p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+*/
+/* line 62, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #1D2021;
+}
+/* line 65, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #3A606E;
+}
+/* line 69, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #785589;
+  text-decoration: none;
+}
+
+ /*
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+*/
+/* line 90, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+input {
+  width: 100%;
+}
+
+/* line 94, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+div .actions {
+  margin: 10px 0;
+}
+
+/* line 98, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 102, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 108, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 116, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 127, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 133, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 5, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+* {
+  box-sizing: border-box;
+  /*border: 1px solid aqua;*/
+}
+
+/* line 8, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+body,
+html {
+  height: 100%;
+  background-color: #FCFCFC;
+  font-size: 16px;
+}
+
+/* line 15, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+h1,
+h2,
+h3 {
+  font-family: 'BioRhyme Expanded', serif;
+}
+
+/* line 21, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+h1 {
+  color: #785589;
+  padding-bottom: 2vh;
+  margin: 0 auto;
+  text-align: right;
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
+/* line 30, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+h4 {
+  font-family: 'BioRhyme', serif;
+}
+
+/* line 34, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+h5 {
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 39, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25em;
+  text-align: justify;
+}
+
+/* line 45, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.row {
+  background-color: #FCFCFC;
+}
+
+/* line 48, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+#wrapper {
+  min-height: 100%;
+  width: 100%;
+}
+
+/* line 53, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.navbar-brand {
+  margin: 1vh 0;
+  padding: 0;
+}
+
+/* line 58, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.logo {
+  width: 10vw;
+}
+
+/* line 62, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+#content {
+  padding-top: 6em;
+  padding-bottom: 3em;
+  /* padding should match footer height. */
+  overflow: auto;
+}
+
+/* line 68, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.introimage {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  margin: 1em auto;
+}
+
+/* line 75, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+footer {
+  margin-top: -3em;
+  height: 3em;
+  /* height should match neg margin.*/
+  background-color: transparent;
+  color: #1D2021;
+  width: 100%;
+  padding: 0.25em;
+  z-index: 19999;
+  font-size: 0.9em;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+/* line 89, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+#copy {
+  font-size: 0.8em;
+  margin-bottom: 0;
+  padding: 0.25em;
+}
+
+/* line 95, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.copyright {
+  display: inline-block;
+  float: left;
+}
+
+/* line 100, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.social {
+  color: #1D2021;
+  margin: 0.5em;
+  display: inline-block;
+  float: right;
+}
+
+/* line 107, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.social:hover {
+  color: #785589;
+  margin: 0.5em;
+  display: inline-block;
+  float: right;
+}
+
+/*-------------------------------*/
+/*     Navbar nav styles         */
+/*-------------------------------*/
+/* line 118, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+nav {
+  height: 6em;
+  position: relative;
+}
+
+/* line 123, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.navbar {
+  margin-bottom: 0;
+  background-color: #FCFCFC;
+  border: 0;
+}
+
+/* line 129, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+container-fluid > .navbar-header {
+  margin-right: 50vw;
+}
+
+/* line 133, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-brand {
+  font-family: 'BioRhyme Expanded', serif;
+  font-size: 3em;
+  color: #1D2021;
+}
+
+/* line 139, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #785589;
+}
+
+/* line 144, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.list-inline {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* line 150, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.list-inline .fa {
+  color: #1D2021;
+  /* White text color */
+  font-size: 2em;
+  /* Increased font-size */
+  text-align: center;
+  /* Center-align text */
+  padding: 0.5em 0.25em;
+  /* Add some padding */
+  transition: all 0.3s ease;
+  /* Add transition for hover effects */
+}
+
+/* line 158, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.list-inline .login {
+  color: #1D2021;
+  /* White text color */
+  font-size: 1em;
+  /* Increased font-size */
+  text-align: center;
+  /* Center-align text */
+  padding: 0.5em 0.25em;
+  /* Add some padding */
+  transition: all 0.3s ease;
+  /* Add transition for hover effects */
+}
+
+/* line 166, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.list-inline .fa:hover,
+.list-inline .login:hover {
+  color: #785589;
+  /* Add a hover color */
+  text-decoration: none;
+}
+
+/* line 172, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+li {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.85em;
+}
+
+/*-------------------------------*/
+/*     Sidebar nav styles        */
+/*-------------------------------*/
+/* line 181, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.icon-bar {
+  width: 5em;
+  /* Set a specific width */
+  position: fixed;
+  border-width: 0;
+  z-index: 1030;
+  left: 0;
+  transform: translateY(25vh);
+  background-color: transparent;
+}
+
+/* line 191, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.icon-bar a {
+  display: block;
+  /* Make the links appear below each other instead of side-by-side */
+  text-align: center;
+  /* Center-align text */
+  padding: 0.5em;
+  /* Add some padding */
+  transition: all 0.3s ease;
+  /* Add transition for hover effects */
+  color: #1D2021;
+  /* White text color */
+  font-size: 36px;
+  /* Increased font-size */
+}
+
+/* line 200, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.icon-bar a:hover {
+  color: #785589;
+  /* Add a hover color */
+}
+
+/* line 204, /home/me/Documents/CareerFoundry/3/nocturnalia/app/assets/stylesheets/static_pages.scss */
+.active {
+  background-color: #785589;
+  /* Add an active/current color */
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
