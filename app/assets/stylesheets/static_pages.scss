@@ -132,12 +132,6 @@ footer {
   background-position: center center;
 }
 
-.carousel1 { background-image: url(sticker6-169.jpg); }
-
-.carousel2 { background-image: url(sticker7-169.jpg); }
-
-.carousel3 { background-image: url(sticker8-169.jpg); }
-
 .carousel-btn {
   position: absolute;
   top: 7.5%;
@@ -150,6 +144,11 @@ footer {
 }
 
 .carousel-control .glyphicon { color: #FCFCFC;}
+
+.img-car {
+  min-width: 100vw;
+  min-height: 100vh;
+}
 
 /*-------------------------------*/
 /*     Navbar nav styles         */

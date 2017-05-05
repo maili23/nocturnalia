@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170430193229) do
+ActiveRecord::Schema.define(version: 20170505184154) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
@@ -24,10 +24,11 @@ ActiveRecord::Schema.define(version: 20170430193229) do
     t.string   "name"
     t.text     "description"
     t.string   "image_url"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.string   "color"
     t.decimal  "price"
+    t.string   "carousel_image"
   end
 
 end

@@ -10,8 +10,8 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <% @products.each do |product| %>
-    <div class="item<%= " active carousel1" if product == @products.first %><%= " carousel2" if product == @products.second %><%= " carousel3" if product == @products.third %>">
-<!--      <%= image_tag(product.image_url) %>-->
+    <div class="item<%= " active" if product == @products.first %>">
+      <%= image_tag(product.carousel_image, :class => "img-car") %>
       <div class="carousel-caption">
         <h2><%= product.name %></h2>       
       </div>
