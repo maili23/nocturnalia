@@ -3,8 +3,13 @@ class StaticPagesController < ApplicationController
   end
   
   def landing_page
-    @featured_product = Product.first
+    @products = Product.last(3)
+    render layout: "landing"
   end
+  
+  #def landing_page
+    #@featured_product = Product.first
+  #end
   
 end
 

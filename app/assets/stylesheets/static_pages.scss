@@ -38,7 +38,7 @@ h5 {
 
 p {
   font-family: 'Lato', sans-serif;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   text-align: justify;
 }
 
@@ -110,6 +110,46 @@ footer {
   display: inline-block;
   float: right;
 }
+
+/*-------------------------------*/
+/*         Landing Page          */
+/*-------------------------------*/
+
+.carousel { margin: 0 -15px; }
+
+.carousel-caption h2 {
+  font-family: 'BioRhyme Expanded', serif;  
+  font-size: 4em;
+  color: #FCFCFC;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.item {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.carousel1 { background-image: url(sticker6-169); }
+
+.carousel2 { background-image: url(sticker7-169); }
+
+.carousel3 { background-image: url(sticker8-169); }
+
+.carousel-btn {
+  position: absolute;
+  top: 7.5%;
+  right: 5%;
+}
+
+.carousel-btn h3 {
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.carousel-control .glyphicon { color: #FCFCFC;}
 
 /*-------------------------------*/
 /*     Navbar nav styles         */
