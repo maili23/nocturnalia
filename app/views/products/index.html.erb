@@ -3,7 +3,7 @@
 <h1>Store</h1>
 <div class="row">
   <% @products.each_with_index do |product, index| %>
-      <div class="col-sm-6 col-md-3">
+      <div class="col-sm-6 col-md-3 lst-box">
         <%= image_tag(product.image_url, class: "img-responsive img-catalog") %>
         <a href="#"><h4><%= product.name %></h4></a>
         <p><%= product.description %></p>
@@ -13,10 +13,12 @@
         <%= link_to 'Edit', edit_product_path(product) %> | 
         <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></h5>
       </div>
+     <% if (index + 1) % 2 == 0 %>
+        <div class='clearfix visible-sm-block'></div>
+      <% end %>
       <% if (index + 1) % 4 == 0 %>
         <div class='clearfix visible-md-block'></div>
       <% end %> 
     <% end %>
 </div>
-
 <%= link_to 'New Product', new_product_path %>
