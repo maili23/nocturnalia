@@ -1,8 +1,7 @@
+<% content_for(:title, @product.name) %>
+
 <div id="product-page">
   <p id="notice"><%= notice %></p>
-  <header>
-    <h1><%= @product.name %></h1>
-  </header>
   <div class="row">
     <div class="col-lg-5">
       <%= image_tag(@product.image_url, class: "img-responsive") %>

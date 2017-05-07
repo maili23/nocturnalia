@@ -1,6 +1,7 @@
+<% content_for(:title, "Tienda") %>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Store</h1>
 <div class="row">
   <% @products.each_with_index do |product, index| %>
     <%= render product %>

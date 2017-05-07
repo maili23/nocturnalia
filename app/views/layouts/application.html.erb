@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Nocturnalia</title>
+    <title>Nocturnalia : <%= yield(:title) %></title>
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded|BioRhyme|Lato" rel="stylesheet">
@@ -18,47 +18,38 @@
       <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#"><%= image_tag("logo.png", class: "img-responsive logo") %></a>
+            <%= link_to image_tag("logo", class: "logo"), root_path %>
           </div>
           <ul class="list-inline">  
             <li>
-              <a href="#" class="hidden-sm hidden-md hidden-lg hidden-xl"><i class="fa fa-user-plus"></i></a>
+              <%= awesome_link "fa-user-plus", root_path, class: "hidden-sm hidden-md hidden-lg hidden-xl" %>
             </li>
             <li>
-              <a href="#" class="hidden-sm hidden-md hidden-lg hidden-xl"><i class="fa fa-info-circle"></i></a>
+              <%= awesome_link "fa-info-circle", static_pages_about_path, class: "hidden-sm hidden-md hidden-lg hidden-xl" %>
             </li>
             <li>
-              <a href="#" class="hidden-sm hidden-md hidden-lg hidden-xl"><i class="fa fa-shopping-basket"></i></a>
+              <%= awesome_link "fa-shopping-basket", products_url, class: "hidden-sm hidden-md hidden-lg hidden-xl" %>
             </li>
             <li>
-              <a href="#" class="hidden-sm hidden-md hidden-lg hidden-xl"><i class="fa fa-calendar"></i></a>
+              <%= awesome_link "fa-calendar", static_pages_events_path, class: "hidden-sm hidden-md hidden-lg hidden-xl" %>
             </li>
             <li>
-              <a href="#" class="hidden-sm hidden-md hidden-lg hidden-xl"><i class="fa fa-envelope"></i></a>
+              <%= awesome_link "fa-envelope", static_pages_contact_path, class: "hidden-sm hidden-md hidden-lg hidden-xl" %>
             </li>
             <li>
               <a href="#" class="hidden-xs login">Login/Register</a>
             </li>
           </ul>
+          <header><h1><%= yield(:title) %></h1></header>
         </div>
       </nav><!-- end navbar -->
       <!--sidebar starts here-->
       <div class="icon-bar hidden-xs">
-        <a href="#" data-toggle="tooltip" data-placement="right" title="Home">
-          <i class="fa fa-home"></i>
-        </a> 
-        <a href="#" data-toggle="tooltip" data-placement="right" title="About">
-          <i class="fa fa-info-circle"></i>
-        </a> 
-        <a href="#" data-toggle="tooltip" data-placement="right" title="Shop">
-          <i class="fa fa-shopping-basket"></i>
-        </a> 
-        <a href="#" data-toggle="tooltip" data-placement="right" title="Events">
-          <i class="fa fa-calendar"></i>
-        </a>
-        <a href="#" data-toggle="tooltip" data-placement="right" title="Contact">
-          <i class="fa fa-envelope"></i>
-        </a> 
+        <%= awesome_link "fa-home", root_path, data: { toggle: 'tooltip', placement: 'right', original_title: 'Inicio' } %>
+        <%= awesome_link "fa-info-circle", static_pages_about_path, data: { toggle: 'tooltip', placement: 'right', original_title: 'Acerca de' } %>
+        <%= awesome_link "fa-shopping-basket", products_url, data: { toggle: 'tooltip', placement: 'right', original_title: 'Tienda' } %>
+        <%= awesome_link "fa-calendar", static_pages_events_path, data: { toggle: 'tooltip', placement: 'right', original_title: 'Eventos' } %>
+        <%= awesome_link "fa-envelope", static_pages_contact_path, data: { toggle: 'tooltip', placement: 'right', original_title: 'Contacto' } %>
       </div>
 <!-- end sidebar -->
 <!-- Page Content -->
@@ -77,16 +68,16 @@
         <h4 id="copy">&copy; 2017 Nocturnalia</h4>
       </div>
       <div class="twitter">
-        <a class="twitter-follow-button social" href="https://twitter.com/dposnanski" data-show-screen-name="false" data-lang="en" data-show-count="false"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a>
+        <%= awesome_link "fa-twitter-square", "https://twitter.com/dposnanski", class: "social fa-lg" %>
       </div>
       <div class="facebook">
-        <a class="fb-follow social" href="https://www.facebook.com/nocturnalia"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a>
+        <%= awesome_link "fa-facebook-square", "https://www.facebook.com/nocturnalia", class: "social fa-lg" %>
       </div>
       <div class="instagram">
-        <a class="fb-follow social" href="https://www.instagram.com/nocturnalia"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+        <%= awesome_link "fa-instagram", "https://www.instagram.com/nocturnalia", class: "social fa-lg" %>
       </div>
       <div class="youtube">
-        <a class="fb-follow social" href="https://www.youtube.com/nocturnalia"><i class="fa fa-youtube-square fa-lg" aria-hidden="true"></i></a>
+        <%= awesome_link "fa-youtube-square", "https://www.youtube.com/nocturnalia", class: "social fa-lg" %>
       </div>
     </footer>
   </body>

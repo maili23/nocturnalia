@@ -10,6 +10,10 @@ end
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
+# Use Font Awesome in Rails
+gem "font-awesome-rails"
+# Use Font Awesome for sidebar and navbar links
+gem 'awesome_link'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
