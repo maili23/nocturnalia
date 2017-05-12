@@ -18,11 +18,10 @@
       <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
-            <%= link_to image_tag("logo", class: "logo"), root_path %>
-          </div>
-          <ul class="list-inline">  
+            <%= link_to image_tag("logo", class: "logo navbar-brand"), root_path %>
+            <ul class="list-inline">  
             <li>
-              <%= awesome_link "fa-user-plus", root_path, class: "hidden-sm hidden-md hidden-lg hidden-xl" %>
+              <%= awesome_link "fa-user-plus", static_pages_index_path, class: "hidden-sm hidden-md hidden-lg hidden-xl" %>
             </li>
             <li>
               <%= awesome_link "fa-info-circle", static_pages_about_path, class: "hidden-sm hidden-md hidden-lg hidden-xl" %>
@@ -36,16 +35,23 @@
             <li>
               <%= awesome_link "fa-envelope", static_pages_contact_path, class: "hidden-sm hidden-md hidden-lg hidden-xl" %>
             </li>
-            <li>
-              <a href="#" class="hidden-xs login">Login/Register</a>
-            </li>
           </ul>
-          <header><h1><%= yield(:title) %></h1></header>
+            <button type="button" class="btn btn-default navbar-btn hidden-xs login">Registrarse | Iniciar Sesión</button>
+        
+            <%= form_tag("/products", method: "get", class: "navbar-form navbar-left") do %>
+            <div class="form-group">
+              <%= text_field_tag :q, params[:q], class: "form-control", placeholder: "Quiero..." %>
+              </div>
+              <%= submit_tag("Buscar", class: "btn btn-default") %>
+            
+            <% end %>
+        
+              </div>
         </div>
       </nav><!-- end navbar -->
       <!--sidebar starts here-->
       <div class="icon-bar hidden-xs">
-        <%= awesome_link "fa-home", root_path, data: { toggle: 'tooltip', placement: 'right', original_title: 'Inicio' } %>
+        <%= awesome_link "fa-home", static_pages_index_path, data: { toggle: 'tooltip', placement: 'right', original_title: 'Inicio' } %>
         <%= awesome_link "fa-info-circle", static_pages_about_path, data: { toggle: 'tooltip', placement: 'right', original_title: 'Acerca de' } %>
         <%= awesome_link "fa-shopping-basket", products_url, data: { toggle: 'tooltip', placement: 'right', original_title: 'Tienda' } %>
         <%= awesome_link "fa-calendar", static_pages_events_path, data: { toggle: 'tooltip', placement: 'right', original_title: 'Eventos' } %>
@@ -57,6 +63,9 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-xs-12 col-sm-11 col-sm-offset-1" >
+              <header>
+                <h1><%= yield(:title) %></h1>
+              </header>
               <%= yield %>
             </div>
           </div>

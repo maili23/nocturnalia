@@ -3,6 +3,19 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
+  <div class="col-md-offset-6 col-md-6">
+    <%= form_tag("/products", method: "get", class: "form-inline") do %>
+        <div class="form-group col-md-5">
+          <%= text_field_tag :aq, params[:aq], class: "form-control", placeholder: "Buscar" %>
+        </div>
+        <div class="form-group col-md-5">
+          <%= label_tag :has_carousel_picture, "Imagen de Carrusel?" %> 
+          <%= radio_button_tag :has_carousel_picture, params[:has_carousel_picture], 'Yes', value: true, class: "form-check radio-inline" %> Sí
+          <%= radio_button_tag :has_carousel_picture, params[:has_carousel_picture], 'No', value: false, class: "form-check radio-inline" %> No
+        </div>
+      <%= submit_tag("Filtrar", class: "btn btn-primary") %>
+    <% end %>
+  </div>
   <% @products.each_with_index do |product, index| %>
     <%= render product %>
     <% if (index + 1) % 2 == 0 %>
@@ -13,4 +26,4 @@
     <% end %> 
   <% end %>
 </div>
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'Agregar Producto', new_product_path %>

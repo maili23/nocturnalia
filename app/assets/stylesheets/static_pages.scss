@@ -2,14 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-* { box-sizing: border-box;
-/*border: 1px solid aqua;*/}
-
 body, 
 html { 
   height: 100%;
   background-color: #FCFCFC;
   font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  color: #1D2021;
 }
 
 h1,
@@ -21,6 +20,7 @@ h3 {
 h1 {
   color: #785589;
   padding-bottom: 2vh;
+  margin: 0 auto;
   text-align: right;
   font-size: 4em;
   text-transform: uppercase;
@@ -42,8 +42,7 @@ p {
 }
 
 .row {
-  background-color: #FCFCFC;
-}
+  background-color: #FCFCFC;}
 
 #wrapper { 
   min-height: 100%; 
@@ -67,7 +66,6 @@ footer {
   margin-top: -3em; 
   height: 3em; /* height should match neg margin.*/
   background-color: transparent;
-  color: #1D2021;
   width: 100%;
   padding: 0.25em;
   z-index: 19999;
@@ -100,6 +98,10 @@ footer {
   margin: 0.5em;
   display: inline-block;
   float: right;
+}
+
+.social:visited {
+  color: #1D2021;
 }
 
 /*-------------------------------*/
@@ -164,13 +166,7 @@ container-fluid>.navbar-header {
   margin:  1vh 0;
   padding: 0;
   max-width: 100%;
-  height: 5.5em !important;
-}
-
-.navbar-inverse .navbar-brand {
-  font-family: 'BioRhyme Expanded', serif;
-  font-size: 3em;
-  color: #1D2021;
+  min-height: 5.5em !important;
 }
 
 .navbar-inverse .navbar-brand:hover,
@@ -192,12 +188,16 @@ container-fluid>.navbar-header {
     transition: all 0.3s ease; /* Add transition for hover effects */
 }
 
-.list-inline .login {
-  color: #1D2021; /* White text color */
-  font-size: 1em; /* Increased font-size */
-  text-align: center; /* Center-align text */
-    padding: 0.5em 0.25em; /* Add some padding */
+.login {
     transition: all 0.3s ease; /* Add transition for hover effects */
+  position: fixed;
+  top: 0.5em;
+  right: 0.5em;
+  border: 0;
+}
+
+.btn-default {
+  border: 0;
 }
 
 .list-inline .fa:hover,
@@ -209,6 +209,21 @@ container-fluid>.navbar-header {
 li {
   font-family: 'Lato', sans-serif;
   font-size: 0.85em;
+}
+
+.find-it
+{
+  position: fixed;
+  top: 0.5em;
+  right: 0em;
+  max-width: 50vw;
+  min-width: 25vw;
+  
+}
+
+.find-what {
+  margin: 0;
+  padding: 0 2px;
 }
 
 /*-------------------------------*/

@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
   end
   
   def landing_page
-    @products = Product.last(5)
+    @products = Product.last(3)
     render layout: "landing"
   end
   

@@ -10,12 +10,6 @@
       <h4 class="description-main">
         <%= @product.description %>
       </h4>
-      <ul class="desc-details">
-        <li>Capacidad de 250ml</li>
-        <li>Altura 9.8cm</li>
-        <li>Diámetro 8cm</li>
-        <li>Aptas para uso en microondas y lavavajillas</li>             
-      </ul>
       <div class="row">
         <div class="col-xs-6 col-lg-4 product-sel">
           <h4>PRICE</h4>
@@ -29,11 +23,11 @@
           <p><%= @product.color %></p>
         </div>
       </div>
-      <input type="submit" class="btn btn-info btn-lg" value="add to cart">
-      <input type="submit" class="btn btn-lg" value="add to wishlist">
+      <input type="submit" class="btn btn-info btn-lg" value="agregar al carrito">
+      <input type="submit" class="btn btn-lg" value="agregar a la lista de deseos">
       <p>
-      <%= link_to 'Edit', edit_product_path(@product) %> |
-      <%= link_to 'Back', products_path %>
+      <%= link_to 'Editar', edit_product_path(@product) %> |
+      <%= link_to 'Regresar', products_path %>
       </p>
     </div>
   </div>
