@@ -2,3 +2,25 @@
 
 <p>Just drop me a line to myemail@mydomain.com or tweet me @mytweeter, you can also find my facebook page here *insert facebook page* or, if you prefer, WhatsApp me or call me under *insert phone number*.</p>
 <p>I'll be happy to hear your ideas!</p>
+
+<%= flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you") do %>
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-group">
+      <%= label_tag :name, "Nombre" %>
+      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Me llamo..." %>
+    </div>      
+    <div class="form-group">
+      <%= label_tag :email, "Correo Electrónico" %>
+      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Mi correo electrónico es..." %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :message, "Mensaje" %>
+      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Quiero decirte que...", rows: "6" %>
+    </div>      
+  </div>
+</div>
+<%= submit_tag "Enviar" %>   
+<% end %>
