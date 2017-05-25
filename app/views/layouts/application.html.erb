@@ -12,15 +12,32 @@
     <script src="https://use.fontawesome.com/07439a54c4.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body data-spy="scroll" data-target=".navbar">
+  <body>
     <div id="wrapper">
-      <!--navbar starts here-->
       <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <%= link_to image_tag("logo", class: "logo navbar-brand"), root_path %>
-            <ul class="list-inline">  
-            <li>
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <%= link_to image_tag("logo", class: "logo navbar-brand"), root_path %>
+       <%= form_tag("/products", method: "get", class: "navbar-form navbar-left form-inline main-search") do %>
+            <div class="form-group">
+              <%= text_field_tag :q, params[:q], class: "form-control", placeholder: "Quiero..." %>
+              </div>
+              <%= submit_tag("Buscar", class: "btn btn-default navbar-btn") %>
+            
+            <% end %>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>  
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav list-inline">
+        <li>
               <%= awesome_link "fa-user-plus", static_pages_index_path, class: "hidden-sm hidden-md hidden-lg hidden-xl" %>
             </li>
             <li>
@@ -35,22 +52,17 @@
             <li>
               <%= awesome_link "fa-envelope", static_pages_contact_path, class: "hidden-sm hidden-md hidden-lg hidden-xl" %>
             </li>
-          </ul>
-            <button type="button" class="btn btn-default navbar-btn hidden-xs login">Registrarse | Iniciar Sesión</button>
-        
-            <%= form_tag("/products", method: "get", class: "navbar-form navbar-left") do %>
-            <div class="form-group">
-              <%= text_field_tag :q, params[:q], class: "form-control", placeholder: "Quiero..." %>
-              </div>
-              <%= submit_tag("Buscar", class: "btn btn-default") %>
-            
-            <% end %>
-        
-              </div>
-        </div>
-      </nav><!-- end navbar -->
+      </ul>
+      <button type="button" class="btn btn-default navbar-btn hidden-xs login">Registrarse | Iniciar Sesión</button>
+      
+    </div><!-- /.navbar-collapse -->
+    <header>
+                <h1 class="desktop-h1 mobile-h1"><%= yield(:title) %></h1>
+              </header>
+  </div><!-- /.container-fluid -->
+</nav><!-- end navbar -->
       <!--sidebar starts here-->
-      <div class="icon-bar hidden-xs">
+      <div class="icon-side-bar hidden-xs">
         <%= awesome_link "fa-home", static_pages_index_path, data: { toggle: 'tooltip', placement: 'right', original_title: 'Inicio' } %>
         <%= awesome_link "fa-info-circle", static_pages_about_path, data: { toggle: 'tooltip', placement: 'right', original_title: 'Acerca de' } %>
         <%= awesome_link "fa-shopping-basket", products_url, data: { toggle: 'tooltip', placement: 'right', original_title: 'Tienda' } %>
@@ -61,11 +73,8 @@
 <!-- Page Content -->
       <div id="content">
         <div class="container-fluid">
-          <div class="row">
+          <div class="row content-yield">
             <div class="col-xs-12 col-sm-11 col-sm-offset-1" >
-              <header>
-                <h1><%= yield(:title) %></h1>
-              </header>
               <%= yield %>
             </div>
           </div>

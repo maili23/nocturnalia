@@ -22,7 +22,7 @@ h1 {
   padding-bottom: 2vh;
   margin: 0 auto;
   text-align: right;
-  font-size: 4em;
+  font-size: 3.5vw;
   text-transform: uppercase;
 }
 
@@ -42,7 +42,9 @@ p {
 }
 
 .row {
-  background-color: #FCFCFC;}
+  background-color: #FCFCFC;
+  z-index: -1;
+}
 
 #wrapper { 
   min-height: 100%; 
@@ -50,10 +52,20 @@ p {
 }
 
 #content { 
-  padding-top: 6em; 
+  padding-top: 7em; 
   padding-bottom: 3em; /* padding should match footer height. */
   overflow: auto; 
 } 
+
+@media only screen and (max-width: 691px) {
+    /* For tablet and mobile: */
+  .content-yield {padding-top: 1em;}
+}
+
+@media only screen and (min-width: 692px) {
+    /* For desktop: */
+  .content-yield {padding-top: 4em;}
+}
 
 .introimage {
   position: relative;
@@ -62,13 +74,20 @@ p {
   margin: 1em auto;
 }
 
+header h1 {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  padding-bottom: 0;
+}
+
 footer { 
   margin-top: -3em; 
   height: 3em; /* height should match neg margin.*/
   background-color: transparent;
   width: 100%;
   padding: 0.25em;
-  z-index: 19999;
+  z-index: 1;
   font-size: 0.9em;
   position: relative; 
   left: 0; 
@@ -152,10 +171,16 @@ nav {
   position: relative;
 }
 
+
 .navbar {
   margin-bottom: 0;
   background-color: #FCFCFC;
   border: 0;
+  height: 7em;
+}
+
+.main-search {
+  display: inline-block;
 }
 
 container-fluid>.navbar-header {
@@ -174,22 +199,57 @@ container-fluid>.navbar-header {
   color: #785589;
 }
 
+.navbar-inverse .navbar-form,
+.navbar-inverse .navbar-collapse {
+    border-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: transparent;
+  background-color: #1D2021;
+}
+
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
+  border-color: transparent;
+  background-color: #785589;
+}
+
+
+.navbar-fixed-top .navbar-collapse {
+    max-height: 100vh;
+}
+
+.navbar-collapse {
+  overflow: hidden;
+}
+
+.nav>li {
+  display: inline-block;
+  
+}
+
 .list-inline {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: fixed;
+  bottom: 0;
+  left: 25px;
+  right: 25px;
+  margin: 0 auto;
+  z-index: 2;
+  background-color: #FCFCFC;
+  text-align: center;
 }
 
 .list-inline .fa {
-  color: #1D2021; /* White text color */
-  font-size: 2em; /* Increased font-size */
-  text-align: center; /* Center-align text */
-    padding: 0.5em 0.25em; /* Add some padding */
-    transition: all 0.3s ease; /* Add transition for hover effects */
+  color: #1D2021; 
+  font-size: 2.5em; 
+  text-align: center; 
+    padding: 0.5em 0.25em; 
+    transition: all 0.3s ease; 
 }
 
 .login {
-    transition: all 0.3s ease; /* Add transition for hover effects */
+    transition: all 0.3s ease; 
   position: fixed;
   top: 0.5em;
   right: 0.5em;
@@ -202,8 +262,9 @@ container-fluid>.navbar-header {
 
 .list-inline .fa:hover,
 .list-inline .login:hover {
-  color: #785589; /* Add a hover color */
+  color: #785589; 
   text-decoration: none;
+  border: 0;
 }
 
 li {
@@ -230,26 +291,26 @@ li {
 /*     Sidebar nav styles        */
 /*-------------------------------*/
 
-.icon-bar {
+.icon-side-bar {
   width: 5em; /* Set a specific width */
   position: fixed;
   border-width: 0;
-  z-index: 1030;
+  z-index: 0;
   left: 0;
   transform: translateY(25vh);
   background-color: transparent;
 }
 
-.icon-bar a {
+.icon-side-bar a {
     display: block; /* Make the links appear below each other instead of side-by-side */
     text-align: center; /* Center-align text */
     padding: 0.5em; /* Add some padding */
     transition: all 0.3s ease; /* Add transition for hover effects */
     color: #1D2021; /* White text color */
-    font-size: 36px; /* Increased font-size */
+    font-size: 40px; /* Increased font-size */
 }
 
-.icon-bar a:hover {
+.icon-side-bar a:hover {
     color: #785589; /* Add a hover color */
 }
 

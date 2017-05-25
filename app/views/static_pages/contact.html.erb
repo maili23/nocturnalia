@@ -7,20 +7,22 @@
 
 <%= form_tag("/static_pages/thank_you") do %>
 <div class="row">
-  <div class="col-md-4">
-    <div class="form-group">
+  <div class="col-md-offset-2 col-md-8">
+    <div class="form-group contact-form">
       <%= label_tag :name, "Nombre" %>
       <%= text_field_tag :name, nil, class: "form-control", placeholder: "Me llamo..." %>
     </div>      
-    <div class="form-group">
+    <div class="form-group contact-form">
       <%= label_tag :email, "Correo Electrónico" %>
       <%= text_field_tag :email, nil, class: "form-control", placeholder: "Mi correo electrónico es..." %>
     </div>
-    <div class="form-group">
+    <div class="form-group contact-form">
       <%= label_tag :message, "Mensaje" %>
       <%= text_area_tag :message, nil, class: "form-control", placeholder: "Quiero decirte que...", rows: "6" %>
-    </div>      
+    </div>
+    <div>
+      <%= submit_tag "Enviar", class: "btn btn-info btn-lg" %>   
+      <% end %>
+    </div>
   </div>
 </div>
-<%= submit_tag "Enviar" %>   
-<% end %>
