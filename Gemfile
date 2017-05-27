@@ -64,4 +64,10 @@ group :production do
   gem 'pg'
 end
 
+# For authentication
 gem 'devise'
+
+# For authorization
+gem 'cancancan', '~> 1.10'
+
+
