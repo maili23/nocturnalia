@@ -81,8 +81,12 @@
         <div class="container-fluid">
           <div class="row content-yield">
             <div class="col-xs-12 col-sm-11 col-sm-offset-1">
-               <p class="notice"><%= notice %></p>
-               <p class="alert"><%= alert %></p>
+              <% if notice %>
+                <p id="notice" class="alert alert-success"><%= notice %></p>
+              <% end %>
+              <% if alert %>
+                <p id="alert" class="alert alert-danger"><%= alert %></p>
+              <% end %>
               <%= yield %>
             </div>
           </div>
