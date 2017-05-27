@@ -251,9 +251,10 @@ container-fluid>.navbar-header {
 .login {
     transition: all 0.3s ease; 
   position: fixed;
-  top: 0.5em;
+  top: 0.05em;
   right: 0.5em;
   border: 0;
+  z-index: 1999999;
 }
 
 .btn-default {

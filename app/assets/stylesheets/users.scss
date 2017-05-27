@@ -1,0 +1,25 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+    margin-left: 0;
+}
+
+.user-input {
+  height: 4em;
+  border-radius: 0;
+}
+
+.user-form {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+btn-lg {
+  height: 4em;
+}
+
+
+

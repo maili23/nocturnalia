@@ -1,0 +1,40 @@
+<% content_for(:title, "Editar Usuario") #+ resource.class.name) %>
+
+<div class="col-sm-6 col-sm-offset-3">
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-group user-form">
+    <%= f.label :email, class: "sr-only" %>
+    <%= f.email_field :email, autofocus: true, class: "form-control user-input", placeholder: "Correo electrónico"  %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="form-group user-form">
+    <%= f.label :password, class: "sr-only" %>
+    <%= f.password_field :password, autocomplete: "off", class: "form-control user-input", placeholder: "Contraseña (deja este espacio en blanco si no deseas cambiar tu contraseña)" %>
+  </div>
+
+  <div class="form-group user-form">
+    <%= f.label :password_confirmation, class: "sr-only" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control user-input", placeholder: "Confirmación de contraseña (Mínimo " + @minimum_password_length.to_s + " caracteres)" %>
+  </div>
+
+  <div class="form-group user-form">
+    <%= f.label :current_password, class: "sr-only" %>
+    <%= f.password_field :current_password, autocomplete: "off", class: "form-control user-input", placeholder: "Contraseña actual (necesitamos tu contraseña actual para confirmar los cambios)" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Actualizar", class: "btn btn-info btn-lg btn-block" %>
+  </div>
+<% end %>
+
+  <%= button_to "Eliminar mi cuenta", registration_path(resource_name), data: { confirm: "¿En verdad quieres eliminar tu cuenta?" }, method: :delete, class: "btn btn-danger btn-lg btn-block" %>
+
+<%= link_to "Regresar", :back %>
+  </div>
