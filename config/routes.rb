@@ -13,6 +13,14 @@ Rails.application.routes.draw do
   root 'static_pages#landing_page'
   
   post 'static_pages/thank_you'
-
+  
+  devise_scope :user do
+    get 'login', to: 'devise/sessions#new'
+  end
+  
+  devise_scope :user do
+    delete 'logout', to: 'devise/sessions#destroy'
+  end
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
