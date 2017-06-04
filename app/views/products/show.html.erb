@@ -25,6 +25,9 @@
       </div>
       <input type="submit" class="btn btn-info btn-lg btn-block" value="agregar al carrito">
       <input type="submit" class="btn btn-lg btn-block" value="agregar a la lista de deseos">
+      
+      <!-- removed = in comment --><% @product.highest_rating_comment %>
+      <!-- removed = in comment --><% @product.lowest_rating_comment %>
       <p>
       <%= link_to 'Editar', edit_product_path(@product) %> |
       <%= link_to 'Regresar', products_path %>
