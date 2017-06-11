@@ -24,3 +24,49 @@ ul {
   width: 100%;
   height: 5em;
 }
+
+.pager {
+  background: transparent;
+  cursor: default;
+  /* self-clearing method: */ }
+  .pager a, .pager span, .pager em {
+    padding: 0.5em 0.75em;
+    display: inline-block;
+    margin-right: 1px; }
+  .pager .disabled {
+    color: #999999;
+    border: 1px solid #dddddd; }
+  .pager .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #5bc0de;
+    color: white;
+    border: 1px solid #5bc0de; }
+  .pager a {
+    text-decoration: none;
+    color: #5bc0de;
+    border: 1px solid #5bc0de; }
+    .pager a:hover, .pager a:focus {
+      color: #1D2021;
+      border-color: #785589; }
+  .pager .page_info {
+    background: #5bc0de;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+    .pager .page_info b {
+      color: #5bc0de;
+      background: #6aa6ed;
+      padding: 0.1em 0.25em; }
+  .pager:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .pager {
+    height: 1%; }
+  *:first-child + html .pager {
+    overflow: hidden; }

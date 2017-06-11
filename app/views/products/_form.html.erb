@@ -11,37 +11,13 @@
     </div>
   <% end %>
 
-  <table>
-    <tr>
-      <th><%= f.label :name %>
-      </th>
-      <th><%= f.label :description %>
-      </th>
-      <th><%= f.label :image_url %>
-      </th>
-      <th><%= f.label :carousel_image %>
-      </th>
-      <th><%= f.label :color %>
-      </th>
-      <th><%= f.label :price %>
-      </th>
-    </tr>
-    <tr>
-      <td class="field"><%= f.text_field :name %>
-      </td>
-      <td class="field"><%= f.text_area :description %>
-      </td>
-      <td class="field"><%= f.text_field :image_url %>
-      </td>
-      <td class="field"><%= f.text_field :carousel_image %>
-      </td>
-      <td class="field"><%= f.text_field :color %>
-      </td>
-      <td class="field"><%= f.text_field :price %>
-      </td>
-    </tr>
-</table>
-
+ <%= f.label :name %><br><%= f.text_field :name %><br>
+ <%= f.label :description %><br><%= f.text_area :description %><br>
+ <%= f.label :image_url %><br><%= f.text_field :image_url %><br>
+ <%= f.label :carousel_image %><br><%= f.text_field :carousel_image %><br>
+ <%= f.label :color %><br><%= f.text_field :color %><br>
+ <%= f.label :price %><br><%= f.text_field :price %><br>
+ 
   <div class="actions">
     <%= f.submit %>
   </div>
