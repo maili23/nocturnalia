@@ -15,4 +15,10 @@ class UserMailer < ApplicationMailer
     UserMailer.contact_form(@email, @name, @message).deliver_now
   end
   
+  def welcome(user)
+    @appname = "Nocturnalia"
+    mail(to: user.email,
+         subject: "¡Bienvenido a #{@appname}!")
+  end
+  
 end
