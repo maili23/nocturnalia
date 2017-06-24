@@ -5,7 +5,8 @@
     <div class="col-lg-5">
       <%= image_tag(@product.image_url, class: "img-responsive") %>
       <p>
-      <%= link_to 'Editar', edit_product_path(@product) %> |
+      <% if signed_in? && current_user.admin? %>
+      <%= link_to 'Editar', edit_product_path(@product) %> |<% end %>
       <%= link_to 'Regresar', products_path %>
       </p>
     </div>

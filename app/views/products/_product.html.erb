@@ -1,10 +1,12 @@
 <div class="col-sm-6 col-md-3 lst-box">
-  <%= image_tag(product.image_url, class: "img-responsive img-catalog") %>
-  <a href="#"><h4><%= product.name %></h4></a>
+  <%= link_to image_tag(product.image_url, class: "img-responsive img-catalog"), product %>
+  <h4><%= product.name %></h4></a>
   <p><%= product.description %></p>
   <p><%= product.color %></p>
   <p><strong><%= product.price %></strong></p>
-  <h5><%= link_to 'Mostrar', product %> | 
+
+  <% if signed_in? && current_user.admin? %><h5><%= link_to 'Mostrar', product %> 
+   | 
   <%= link_to 'Editar', edit_product_path(product) %> | 
-  <%= link_to 'Eliminar', product, method: :delete, data: { confirm: '¿En verdad quieres eliminar este producto?' } %></h5>
+  <%= link_to 'Eliminar', product, method: :delete, data: { confirm: '¿En verdad quieres eliminar este producto?' } %></h5><% end %>
 </div>

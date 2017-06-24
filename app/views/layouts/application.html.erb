@@ -18,7 +18,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <%= link_to image_tag("logo", class: "logo navbar-brand"), root_path %>
-       <%= form_tag("/products", method: "get", class: "navbar-form navbar-left form-inline main-search") do %>
+       <%= form_tag("products_url", method: "get", class: "navbar-form navbar-left form-inline main-search") do %>
             <div class="form-group">
               <%= text_field_tag :q, params[:q], class: "form-control", placeholder: "Quiero..." %>
               </div>

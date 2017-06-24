@@ -78,4 +78,7 @@ gem 'will_paginate', '~> 3.1.1'
   gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'master'
 end
 
+## For functional testing
+gem 'rails-controller-testing'
+
 
