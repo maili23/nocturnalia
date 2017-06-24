@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
         format.html { redirect_to @product, notice: 'Se han agregado tus comentarios exitosamente.' }
         format.json { render :show, status: :created, location: @product }
       else
-        format.html { redirect_to @product, notice: 'No se han podido agregar tus comentarios.' }
+        format.html { redirect_to @product, alert: 'No se han podido agregar tus comentarios.' }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
