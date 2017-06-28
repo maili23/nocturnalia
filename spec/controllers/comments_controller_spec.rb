@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe CommentsController, type: :controller do 
-	let(:user) { User.create!(first_name: "User", last_name: "One", email: "myemail1@mydomain.com", password: "lemmetestthis") }
+	user = FactoryGirl.create(:user)
 	let(:product) { Product.create!(name: "awesome cup", description: "great", image_url: "cup6-169", carousel_image: "cup6-11", color: "gray", price: "34" ) }
 
 	context 'when a user writes a comment' do

@@ -1,13 +1,13 @@
 require 'rails_helper'
 
 describe ProductsController, type: :controller do 
-	let(:user1) { User.create!(first_name: "User", last_name: "One", email: "myemail1@mydomain.com", password: "lemmetestthis1") }
-	let(:user2) { User.create!(first_name: "User", last_name: "Two", email: "myemail2@mydomain.com", password: "lemmetestthis2", admin: true) }
+	user = FactoryGirl.create(:user)
+	admin = FactoryGirl.create(:admin)
 	let(:product) { Product.create!(name: "awesome cup", description: "great", image_url: "cup6-169", carousel_image: "cup6-11", color: "gray", price: "34" ) }
 
 	context 'when a non admin wants to edit a product' do
 		before do
-			sign_in user1
+			sign_in user
 		end
 		it 'redirects the user to the home page' do
 			get :edit, params: { id: product.id }
@@ -18,7 +18,7 @@ describe ProductsController, type: :controller do
 
 	context 'when an admin wants to edit a product' do
 		before do
-			sign_in user2
+			sign_in admin
 		end
 		it 'sends admin to the edit page' do
 			get :edit, params: { id: product.id }
