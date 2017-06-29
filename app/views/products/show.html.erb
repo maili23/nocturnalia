@@ -29,9 +29,12 @@
           <p><%= @product.color %></p>
         </div>
       </div>
-      <input type="submit" class="btn btn-info btn-lg btn-block" value="agregar al carrito">
+      <%= form_tag "/charges/create" do %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+        <%= hidden_field_tag(:product_id, @product.id) %>
+      <% end %>
       <input type="submit" class="btn btn-lg btn-block" value="agregar a la lista de deseos">
-      <div>
+    <div>
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs tabs-product-title" role="tablist">

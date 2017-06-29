@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "user_registrations" }
   resources :users
+  resources :charges
   resources :products do
     resources :comments
   end
@@ -17,6 +18,8 @@ Rails.application.routes.draw do
   
   post 'static_pages/thank_you'
   
+  post 'charges/create'
+
   devise_scope :user do
     get 'login', to: 'devise/sessions#new'
   end

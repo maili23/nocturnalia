@@ -84,5 +84,8 @@ gem 'rails-controller-testing'
 #FactoryGirl for testing
 gem 'factory_girl_rails', '~> 4.0'
 
+#Stripe for Payments
+gem 'stripe'
+
 
 
