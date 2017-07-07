@@ -8,6 +8,7 @@ class Ability
     else
       can :manage, User, id: user.id  
       can :read, Product
+      can :manage, Order, id: user.id 
     end
   end
 

@@ -63,8 +63,22 @@
       
     </div><!-- /.navbar-collapse -->
     <header>
+   
                 <h1 class="desktop-h1 mobile-h1"><%= yield(:title) %></h1>
               </header>
+               <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xs-12 col-sm-11 col-sm-offset-1" id="notifications">
+               <% if notice %>
+                <p id="notice" class="alert alert-success"><%= notice %><a href="#" class="close">&times;</a></p>
+              <% end %>
+              <% if alert %>
+                <p id="alert" class="alert alert-danger"><%= alert %><a href="#" class="close">&times;</a></p>
+              <% end %>
+              </div>
+              </div>
+              </div>
+
   </div><!-- /.container-fluid -->
 </nav><!-- end navbar -->
       <!--sidebar starts here-->
@@ -81,12 +95,6 @@
         <div class="container-fluid">
           <div class="row content-yield">
             <div class="col-xs-12 col-sm-11 col-sm-offset-1">
-              <% if notice %>
-                <p id="notice" class="alert alert-success"><%= notice %></p>
-              <% end %>
-              <% if alert %>
-                <p id="alert" class="alert alert-danger"><%= alert %></p>
-              <% end %>
               <%= yield %>
             </div>
           </div>

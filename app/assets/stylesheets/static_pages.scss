@@ -41,6 +41,13 @@ p {
   text-align: justify;
 }
 
+#notifications {
+  padding-left: 0;
+  padding-right: 0;
+  min-height: 0;
+  margin-bottom: 0;
+}
+
 .row {
   background-color: #FCFCFC;
   z-index: -1;
