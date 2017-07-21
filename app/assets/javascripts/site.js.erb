@@ -1,11 +1,14 @@
 $(document).on('turbolinks:load', function() {
+  
+  // Rate products
+
   $('.rating').raty({
     starHalf: '<%= asset_path "star-half.png" %>',
     starOff: '<%= asset_path "star-off.png" %>',
     starOn: '<%= asset_path "star-on.png" %>',
     scoreName: 'comment[rating]'
   });
-  
+
   $('.rated').raty({
     starHalf: '<%= asset_path "star-half.png" %>',
     starOff: '<%= asset_path "star-off.png" %>',
@@ -14,5 +17,12 @@ $(document).on('turbolinks:load', function() {
     score: function (){
       return $(this).attr('data-score');
     }
+  });
+
+  // Zoom for product images
+
+  $('.img-zoom').elevateZoom({
+    zoomType: "inner",
+    cursor: "crosshair"
   });
 });

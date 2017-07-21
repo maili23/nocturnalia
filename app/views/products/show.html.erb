@@ -3,7 +3,7 @@
 <div id="product-page">
   <div class="row">
     <div class="col-lg-5">
-      <%= image_tag(@product.image_url, class: "img-responsive") %>
+      <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "#{@product.image_url}") %>
       <p>
       <% if signed_in? && current_user.admin? %>
       <%= link_to 'Editar', edit_product_path(@product) %> |<% end %>
