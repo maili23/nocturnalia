@@ -5,6 +5,8 @@ class Comment < ApplicationRecord
   validates :rating, numericality: { only_integer: true }, :inclusion => 1..5
   belongs_to :user
   belongs_to :product
+
+  default_scope { order(created_at: :desc) }
   
   scope :rating_desc, -> { order(rating: :desc) }
   

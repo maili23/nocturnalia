@@ -1,6 +1,5 @@
-$(document).on('turbolinks:load', function() {
-  
-  // Rate products
+// Rate products
+var refreshRating = function() {
 
   $('.rating').raty({
     starHalf: '<%= asset_path "star-half.png" %>',
@@ -18,7 +17,14 @@ $(document).on('turbolinks:load', function() {
       return $(this).attr('data-score');
     }
   });
+};
 
+
+
+
+$(document).on('turbolinks:load', function() {
+  refreshRating();
+  
   // Zoom for product images
 
   $('.img-zoom').elevateZoom({
