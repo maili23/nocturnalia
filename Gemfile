@@ -87,5 +87,8 @@ gem 'factory_girl_rails', '~> 4.0'
 #Stripe for Payments
 gem 'stripe'
 
+#MemCachier + Dalli to improve loading times
+gem 'dalli'
+
 
 

@@ -20,13 +20,15 @@
     <% end %>
   </div>
   <% @products.each_with_index do |product, index| %>
-    <%= render product %>
+  <% cache(cache_key_for_products) do %>
+    <%= render @products %>
     <% if (index + 1) % 2 == 0 %>
       <div class='clearfix visible-sm-block'></div>
     <% end %>
     <% if (index + 1) % 4 == 0 %>
       <div class='clearfix visible-md-block'></div>
     <% end %> 
+  <% end %>  
   <% end %>
 </div>
 

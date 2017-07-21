@@ -2,6 +2,7 @@
 
 <div id="product-page">
   <div class="row">
+  <% cache @product do %>
     <div class="col-lg-5">
       <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "#{@product.image_url}") %>
       <p>
@@ -35,6 +36,7 @@
       <% end %>
       <input type="submit" class="btn btn-lg btn-block" value="agregar a la lista de deseos">
     <div>
+  <% end %>
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs tabs-product-title" role="tablist">
