@@ -1,24 +1,22 @@
 <% content_for(:title, "Tienda") %>
 
 <div class="row">
-
-    <% if signed_in? && current_user.admin? %>
-  <div class="col-xs-12">
-    <%= form_tag("/products", method: "get", class: "form-inline admin-search") do %>
+  <% if signed_in? && current_user.admin? %>
+    <div class="col-xs-12">
+      <%= form_tag("/products", method: "get", class: "form-inline admin-search") do %>
         <div class="form-group col-md-5">
           <%= text_field_tag :aq, params[:aq], class: "form-control", placeholder: "Buscar" %>
-
         </div>
-    <% end %>
-        <div class="form-group col-md-5">
-          <%= label_tag :has_carousel_picture, "¿Imagen de Carrusel?" %> 
-          <%= radio_button_tag :has_carousel_picture, params[:has_carousel_picture], 'Yes', value: true, class: "form-check radio-inline" %> Sí
-          <%= radio_button_tag :has_carousel_picture, params[:has_carousel_picture], 'No', value: false, class: "form-check radio-inline" %> No
-        </div>
+      <% end %>
+      <div class="form-group col-md-5">
+        <%= label_tag :has_carousel_picture, "¿Imagen de Carrusel?" %> 
+        <%= radio_button_tag :has_carousel_picture, params[:has_carousel_picture], 'Yes', value: true, class: "form-check radio-inline" %> Sí
+        <%= radio_button_tag :has_carousel_picture, params[:has_carousel_picture], 'No', value: false, class: "form-check radio-inline" %> No
+      </div>
       <%= submit_tag("Filtrar", class: "btn btn-primary") %>
-         <%= link_to 'Agregar Producto', new_product_path %>
-    <% end %>
-  </div>
+      <%= link_to 'Agregar Producto', new_product_path %>
+    </div>
+  <% end %>
   <% @products.each_with_index do |product, index| %>
   <% cache(cache_key_for_products) do %>
     <%= render @products %>

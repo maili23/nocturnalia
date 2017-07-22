@@ -6,9 +6,12 @@
   <p><%= product.color %></p>
   <p><strong><%= product.price %></strong></p>
 
-  <% if signed_in? && current_user.admin? %><h5><%= link_to 'Mostrar', product %> 
-   | 
-  <%= link_to 'Editar', edit_product_path(product) %> | 
-  <%= link_to 'Eliminar', product, method: :delete, data: { confirm: '¿En verdad quieres eliminar este producto?' } %></h5><% end %>
+  <% if signed_in? && current_user.admin? %>
+    <h5>
+      <%= link_to 'Mostrar', product %> | 
+      <%= link_to 'Editar', edit_product_path(product) %> | 
+      <%= link_to 'Eliminar', product, method: :delete, data: { confirm: '¿En verdad quieres eliminar este producto?' } %>
+    </h5>
+  <% end %>
   <% end %>
 </div>
