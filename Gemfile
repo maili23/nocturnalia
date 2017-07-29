@@ -90,5 +90,10 @@ gem 'stripe'
 #MemCachier + Dalli to improve loading times
 gem 'dalli'
 
+#Redis for caching
+gem 'redis-rails'
+
+gem 'newrelic_rpm'
+
 
 
