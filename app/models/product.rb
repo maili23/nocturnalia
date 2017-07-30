@@ -40,6 +40,23 @@ class Product < ApplicationRecord
     comments.average(:rating).to_f
   end
     
+  def hit_it
+    if $redis.get(id).nil?
+      $redis.setex(id, 3600, 1)
+    else
+      $redis.incr(id)
+    end
+  end
+
+  def hits
+    res = $redis.get(id.to_s)
+    if not res.nil? 
+      Integer(res) 
+    else 
+      0
+    end
+  end
+
 end
 
 

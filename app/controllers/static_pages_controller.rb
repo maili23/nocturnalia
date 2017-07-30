@@ -3,10 +3,13 @@ class StaticPagesController < ApplicationController
   end
   
   def landing_page
-    @products = Product.last(3)
+    @products = Product.where("carousel_image LIKE '%-%'").last(20)
+    @products.sort_by! { |p| -p.hits }
+    @products = @products[0..3]
+
     render layout: "landing"
   end
-  
+
   #def landing_page
     #@featured_product = Product.first
   #end
