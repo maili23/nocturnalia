@@ -1,7 +1,7 @@
 <% content_for(:title, @product.name) %>
 
 <div id="product-page">
-  <div class="row">
+  <div class="row" data-product-id="<%= @product.id %>">
   <% cache @product do %>
     <div class="col-lg-5">
       <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "#{@product.image_url}") %>

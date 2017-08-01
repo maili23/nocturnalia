@@ -1,7 +1,5 @@
 $("#new_comment").html("¡Gracias por tus comentarios!");
 
-$(".product-reviews").prepend("<%= j render @comment %>");
-
 $("#average-rating").attr("data-score", "<%= @product.average_rating %>");
 
 $(document).on('turbolinks:load ajaxSuccess', function() {
