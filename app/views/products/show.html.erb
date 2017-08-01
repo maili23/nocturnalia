@@ -50,6 +50,7 @@
         <%= render 'new_comment' %>
       </div>
       <div class="col-lg-6">
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
         <%= render 'comments' %>
         <%= will_paginate @comments, class: "pager" %>
       </div>
