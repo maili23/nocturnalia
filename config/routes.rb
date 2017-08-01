@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "user_registrations" }
+
+  mount ActionCable.server => '/cable'
+
   resources :users
   resources :charges
   resources :products do
     resources :comments
   end
   resources :orders, only: [:index, :show, :create, :destroy]
-  mount ActionCable.server => '/cable'
   
   get 'static_pages/about'
 
@@ -29,5 +31,6 @@ Rails.application.routes.draw do
     delete 'logout', to: 'devise/sessions#destroy'
   end
   
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
