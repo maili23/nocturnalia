@@ -42,9 +42,7 @@ gem 'redis', '~> 3.3.3'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-end
-
-group :development, :test do
+  gem 'database_cleaner'
   gem 'sqlite3'
 end
 

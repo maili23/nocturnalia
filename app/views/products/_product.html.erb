@@ -6,7 +6,8 @@
   <p><%= product.color %></p>
   <p><strong><%= product.price %></strong></p>
 
-  <% if signed_in? && current_user.admin? %>
+   <% if current_user && current_user.admin? %>
+   
     <h5>
       <%= link_to 'Mostrar', product %> | 
       <%= link_to 'Editar', edit_product_path(product) %> | 

@@ -33,7 +33,7 @@ class Product < ApplicationRecord
   end
   
   def lowest_rating_comment
-    comments.rating_asc.first
+    comments.rating_desc.last
   end
   
   def average_rating

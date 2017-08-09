@@ -1,7 +1,7 @@
 <% content_for(:title, "Tienda") %>
 
 <div class="row">
-  <% if signed_in? && current_user.admin? %>
+  <% if current_user && current_user.admin? %>
     <div class="col-xs-12">
       <%= form_tag("/products", method: "get", class: "form-inline admin-search") do %>
         <div class="form-group col-md-5">
