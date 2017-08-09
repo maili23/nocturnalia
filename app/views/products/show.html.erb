@@ -7,8 +7,10 @@
       <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "#{@product.image_url}") %>
       <p>
         
+      <% if current_user && current_user.admin? %>
+
         <%= link_to 'Editar', edit_product_path(@product) %> |
-      <% if signed_in? && current_user.admin? %>
+      
       <% end %>
       <%= link_to 'Regresar', products_path %>
       </p>
